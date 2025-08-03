@@ -1,0 +1,18 @@
+﻿version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: aidcare-postgres
+    environment:
+      POSTGRES_DB: aidcare_db
+      POSTGRES_USER: aidcare_user
+      POSTGRES_PASSWORD: aidcare123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
