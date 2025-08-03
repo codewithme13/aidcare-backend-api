@@ -60,6 +60,17 @@ namespace AidCare.DataAccess
                 {
                     entity.UpdatedDate = DateTime.UtcNow;
                 }
+
+                foreach (var property in entityEntry.Properties)
+                {
+                    if (property.Metadata.ClrType == typeof(DateTime) || property.Metadata.ClrType == typeof(DateTime?))
+                    {
+                        if (property.CurrentValue is DateTime dateTime && dateTime.Kind == DateTimeKind.Unspecified)
+                        {
+                            property.CurrentValue = DateTime.SpecifyKind(dateTime, DateTimeKind.Utc);
+                        }
+                    }
+                }
             }
 
             return base.SaveChangesAsync(cancellationToken);
