@@ -91,24 +91,40 @@ Veritabanı Tabloları
 --Users
 
 Id
+
 TcKimlikNo
+
 FirstName
+
 LastName
+
 Email
+
 PhoneNumber
+
 DateOfBirth
+
 CreatedDate
+
 UpdatedDate
+
 IsDeleted
 
 
 --BloodGlucoseRecords
 
 Id
+
 UserId
+
 GlucoseValue
+
 MeasurementDate
+
 Notes
+
 CreatedDate
+
 UpdatedDate
+
 IsDeleted
