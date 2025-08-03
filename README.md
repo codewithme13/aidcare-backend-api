@@ -6,7 +6,9 @@ cd aidcare-backend-api
 * PostgreSQL’i başlatın
 
 Docker üzerinden şöyle çalıştırıyorum:
+
 docker run --name aidcare-postgres-new -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres:15
+
 Sonra docker ps ile kontrol ediyorum.
 
 
