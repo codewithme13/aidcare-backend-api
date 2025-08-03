@@ -19,6 +19,6 @@ namespace AidCare.Entities
         public string? Notes { get; set; }
 
         [ForeignKey("UserId")]
-        public virtual User User { get; set; } = null!;
+        public virtual User? User { get; set; } = null!;
     }
 }

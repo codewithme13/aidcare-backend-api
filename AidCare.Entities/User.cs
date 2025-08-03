@@ -26,7 +26,7 @@ namespace AidCare.Entities
         public string? PhoneNumber { get; set; }
 
         [Required]
-        public DateTime DateOfBirth { get; set; }
+        public DateOnly DateOfBirth { get; set; }
 
         //Kullanıcının kan şekeri kayıtları
         public virtual ICollection<BloodGlucose> BloodGlucoseRecords { get; set; } = new List<BloodGlucose>();
