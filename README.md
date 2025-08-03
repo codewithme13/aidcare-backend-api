@@ -40,33 +40,50 @@ Now listening on: http://localhost:5270
 API Örnekleri
 
 Kullanıcı ekleme
+
 POST http://localhost:5270/api/users
+
 Content-Type: application/json
+
 Body:
+
 {
+
   "tcKimlikNo": "12345678901",
+  
   "firstName": "Ahmet",
+  
   "lastName": "Yılmaz",
+  
   "email": "ahmet@gmail.com",
+  
   "phoneNumber": "05551234567",
+  
   "dateOfBirth": "1990-01-01"
+  
 }
 
 
 Kan şekeri ölçümü ekleme
+
 POST http://localhost:5270/api/bloodglucose
 
 
 Body:
 {
   "userId": 1,
+  
   "glucoseValue": 120.5,
+  
   "measurementDate": "2025-08-03T20:00:00",
+  
   "notes": "Yemek sonrası ölçüm"
+  
 }
 
 
 Kullanıcıları listeleme
+
 GET http://localhost:5270/api/users
 
 Veritabanı Tabloları
