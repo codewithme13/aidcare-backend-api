@@ -1,6 +1,6 @@
 * Projeyi indirin
 
-git clone https://github.com/yourusername/aidcare-backend-api.git
+git clone https://github.com/codewithme13/aidcare-backend-api.git
 cd aidcare-backend-api
 
 * PostgreSQL’i başlatın
