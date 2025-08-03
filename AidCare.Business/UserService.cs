@@ -51,8 +51,8 @@ namespace AidCare.Business
 
         public async Task<User> UpdateAsync(User user)
         {
-            var existingUser = await GetByIdAsync(user.Id);
-            if (existingUser == null)
+            var existingUserCheck = await _userRepository.ExistsAsync(u => u.Id == user.Id);
+            if (!existingUserCheck)
             {
                 throw new InvalidOperationException("Güncellenecek kullanıcı bulunamadı.");
             }

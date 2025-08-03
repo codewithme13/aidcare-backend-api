@@ -47,8 +47,8 @@ namespace AidCare.Business
 
         public async Task<BloodGlucose> UpdateAsync(BloodGlucose bloodGlucose)
         {
-            var existingRecord = await GetByIdAsync(bloodGlucose.Id);
-            if (existingRecord == null)
+            var existingRecordCheck = await _bloodGlucoseRepository.ExistsAsync(bg => bg.Id == bloodGlucose.Id);
+            if (!existingRecordCheck)
             {
                 throw new InvalidOperationException("Güncellenecek kan şekeri kaydı bulunamadı.");
             }
